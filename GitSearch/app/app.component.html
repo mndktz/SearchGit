@@ -1,0 +1,28 @@
+﻿<div class="text-center">
+    <h1>Welcome To Git Search</h1>
+    <h4> An easy to use search engine to find and bookmark your favorite git repositories</h4>
+    <br />
+    <input type="text" name="search" (keyup.enter)="onReturn($event)" />
+
+</div>
+<br />
+<div *ngIf="loading" class="loader" id="loader-2">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div *ngIf="noResults">No records found.</div>
+<div *ngIf="!loading">
+    <ul class="list-group">
+        <li class="list-group-item repo-item" *ngFor="let repo of repos">
+            <img src="{{repo.avatar}}" class="col-xs-3 img-responsive avatar">
+            <div class="col-xs-3">
+                <p class="owner-title active m0">Owner</p>
+                <p class="owner-name m0">{{repo.owner}}</p>
+            </div>
+            <span class="col-xs-5 repo-name">{{repo.name}}</span>
+            <i [ngClass]="[repo.add ? 'fas marked' : 'far'] " class="col-xs-1 fa-star fa-2x bookmark-star" (click)="bookmark(repo)"></i>
+        </li>
+
+    </ul>
+</div>

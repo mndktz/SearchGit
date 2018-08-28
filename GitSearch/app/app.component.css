@@ -1,0 +1,100 @@
+﻿.text-center {
+text-align:center;
+}
+input[type=text] {
+    width: 50%;
+    height: 33px;
+}
+
+.search-button {
+    height:33px;
+    color:blue;
+    opacity:0.4;
+    background-color : transparent;
+}
+.repo-item {
+    min-height: 66px;
+    overflow: hidden;
+}
+
+
+.avatar {
+    width: 80px;
+    margin-top: -6px;
+    border-radius: 50%;
+}
+
+.owner-title {
+    font-weight: bold;
+    color: gray;
+    font-size: 16px;
+}
+
+.owner-name {
+
+    color: lightgray;
+}
+
+.repo-name {
+    font-weight: bold;
+    font-size: 17px;
+    margin-left:2%;
+}
+
+.bookmark-star{
+    float:right;
+    margin:5px;
+}
+
+.marked{
+    color: yellow;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#loader-2 span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #3498db;
+    margin: 35px 5px;
+}
+
+    #loader-2 span:nth-child(1) {
+        animation: bounce 1s ease-in-out infinite;
+    }
+
+    #loader-2 span:nth-child(2) {
+        animation: bounce 1s ease-in-out 0.33s infinite;
+    }
+
+    #loader-2 span:nth-child(3) {
+        animation: bounce 1s ease-in-out 0.66s infinite;
+    }
+
+@keyframes bounce {
+    0%, 75%, 100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    25% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
